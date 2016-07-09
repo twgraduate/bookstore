@@ -1,0 +1,14 @@
+.DS_Store
+
+log/*.log
+tmp/
+build/
+coverage/
+vendor/cache
+db/*.sqlite3
+
+# IDE
+*.iml
+*.ipr
+*.iws
+.idea/
