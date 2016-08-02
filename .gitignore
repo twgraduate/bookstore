@@ -1,14 +1,17 @@
 .DS_Store
 
 log/*.log
-tmp/
+
 build/
 coverage/
 vendor/cache
 db/*.sqlite3
+log/
+.idea/
+public/
+tmp/
 
 # IDE
 *.iml
-*.ipr
+*.ip
 *.iws
-.idea/
