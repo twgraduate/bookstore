@@ -1,0 +1,22 @@
+.header p{
+    font-size: 80px;
+    color: #fff9fa;
+    margin: 50px 100px 50px 0px;
+    background: #2da2d4;
+}
+
+.tableHead{
+    text-align: center;
+    font-size: 30px;
+    color: #fcfcff;
+    background: #bd8352;
+}
+
+.tableBody{
+    text-align: center;
+    background: aliceblue;
+}
+
+.bookName{
+    font-size: 30px;
+}

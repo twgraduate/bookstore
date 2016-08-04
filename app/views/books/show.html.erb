@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BOOKSTORE</title>
+</head>
+
+<body>
+<dl>
+  <dt><img src="<%= @book["img_url"] %>"></dt>
+  <dt>Book Name:<%= @book["name"] %></dt>
+  <dt>Book Isbn:<%= @book["isbn"] %></dt>
+  <dt>Book Author:<%= @book["author"] %></dt>
+  <dt>Book Price:<%= @book["price"] %></dt>
+  <dt>Book Description:<%= @book["description"] %></dt>
+</dl>
+<a href="http://localhost:3000/books">Back to index!</a>
+</body>
+</html>
