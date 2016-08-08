@@ -11,6 +11,5 @@ class BooksController < ApplicationController
     @book = @book.body
     @book = JSON.parse(@book)
   end
-
 end
 

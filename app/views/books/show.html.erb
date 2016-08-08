@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>BOOKSTORE</title>
+  <%= stylesheet_link_tag 'show' %>
+  <meta charset="utf-8">
+  <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
 </head>
 
 <body>
-<dl>
-  <dt><img src="<%= @book["img_url"] %>"></dt>
-  <dt>Book Name:<%= @book["name"] %></dt>
-  <dt>Book Isbn:<%= @book["isbn"] %></dt>
-  <dt>Book Author:<%= @book["author"] %></dt>
-  <dt>Book Price:<%= @book["price"] %></dt>
-  <dt>Book Description:<%= @book["description"] %></dt>
-</dl>
-<a href="http://localhost:3000/books">Back to index!</a>
+<div class="bookDetail">
+  <div id="bookCover"><img src="<%= @book["img_url"] %>" , width="200"></div>
+  <ul>
+    <li>Book Name:<%= @book["name"] %></li>
+    <li>Book Isbn:<%= @book["isbn"] %></li>
+    <li>Book Author:<%= @book["author"] %></li>
+    <li>Book Price:<%= @book["price"] %></li>
+    <li>Book Description:<%= @book["description"] %></li>
+    <li> <%= link_to "Book list!", books_path%></li>
+  </ul>
+</div>
 </body>
 </html>
