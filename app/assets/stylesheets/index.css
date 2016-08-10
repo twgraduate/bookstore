@@ -6,6 +6,24 @@
     background: #2da2d4;
 }
 
+.searchBar {
+    display: inline-flex;
+    margin: 0 0 30px -175px;
+    position: relative;
+    left: 50%;
+}
+.searchBar input {
+    height: 35px;
+    width: 250px;
+    font-size: 20px;
+    border: #eee 1px solid;
+    outline: none;
+}
+.searchBar button {
+    height: 40px;
+    width: 100px;
+    font-size: 25px;
+}
 .bookList{
     width: 1200px;
     margin: 0 auto;
@@ -15,7 +33,7 @@
     float: left;
     width: 400px;
     height: 160px;
-    background: rgba(11, 11, 11, 0.08);
+    background: rgb(202, 232, 245);
 }
 
 .bookList #tableOfBook #img{

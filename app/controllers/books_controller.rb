@@ -1,15 +1,13 @@
 class BooksController < ApplicationController
 
   def index
-    @books = RestClient.get 'http://localhost:4000/books'
-    @books = @books.body
-    @books = JSON.parse(@books)
+    response = RestClient.get 'http://localhost:4000/books'
+    @books = JSON.parse(response.body)
   end
 
   def show
-    @book = RestClient.get "http://localhost:4000/books/#{params[:isbn]}"
-    @book = @book.body
-    @book = JSON.parse(@book)
+    response = RestClient.get "http://localhost:4000/books/#{params[:isbn]}"
+    @book = JSON.parse(response.body)
   end
 end
 

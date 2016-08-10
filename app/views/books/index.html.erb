@@ -3,12 +3,20 @@
 <head>
   <title>BOOKSTORE</title>
   <%= stylesheet_link_tag 'index' %>
+  <%= javascript_include_tag 'index' %>
 </head>
 
 <body>
+
 <div class="header">
   <p>BOOK LIST!</p>
 </div>
+
+<div class = 'searchBar'>
+  <input type="text" value="">
+  <button>Search</button>
+</div>
+
 <div class="bookList">
   <% @books.each do |book| %>
       <table id="tableOfBook" border="1">

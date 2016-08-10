@@ -1,7 +1,11 @@
 .bookDetail{
-    margin: 0px 200px;
+    margin: 0 200px;
 }
 
 .bookDetail #bookCover{
     text-align: center;
+}
+
+#orderNumber input{
+    width: 50px;
 }
