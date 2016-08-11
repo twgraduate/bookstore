@@ -1,3 +1,4 @@
-var ele_key = document.getElementById("key");
-ele_key.onkeyup = function (e) {
+function goTo(){
+    var bookIsbn = document.getElementById('searchText').value;
+    location.href = '/books/'+bookIsbn;
 }
