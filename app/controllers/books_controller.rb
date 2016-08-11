@@ -5,7 +5,7 @@ class BooksController < ApplicationController
     @books = JSON.parse(response.body)
   end
 
-  def show_by_isbn
+  def show
     response = RestClient.get "http://localhost:4000/books/#{params[:isbn]}"
     @book = JSON.parse(response.body)
   end

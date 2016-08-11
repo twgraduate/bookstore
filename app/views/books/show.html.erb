@@ -3,7 +3,7 @@
 
 <head>
   <title>BOOKSTORE</title>
-  <%= stylesheet_link_tag 'show_by_isbn' %>
+  <%= stylesheet_link_tag 'show' %>
   <meta charset="utf-8">
   <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
 </head>
@@ -11,15 +11,17 @@
 <body>
 <div class="bookDetail">
   <div id="bookCover"><img src="<%= @book["img_url"] %>" , width="200"></div>
-  <ul>
+  <ul id="bookInfo">
     <li>Book Name:<%= @book["name"] %></li>
     <li>Book Isbn:<%= @book["isbn"] %></li>
     <li>Book Author:<%= @book["author"] %></li>
-    <li>Book Price:<%= @book["price"] %></li>
+    <li id="price">Book Price:<%= @book["price"] %></li>
     <li>Book Description:<%= @book["description"] %></li>
-    <li id ='orderNumber'>Order number:<input type="text" value=""></li>
-    <li id ='totalPrice'>Total price:</li>
-    <li> <%= link_to "Book list!", books_path%></li>
+    <div ng-app="">
+      <li>Order number: <input type="number" ng-model="thisTotalPrice"></li>
+      <li>Total price:{{thisTotalPrice * <%= @book["price"] %>}}</li>
+    </div>
+    <li><%= link_to "Book list!", books_path%></li>
   </ul>
 </div>
 </body>

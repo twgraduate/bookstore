@@ -1,0 +1,18 @@
+.bookDetail{
+    margin: 0 200px;
+}
+.bookDetail #bookCover{
+    text-align: center;
+}
+.bookDetail #bookInfo{
+    font-size: 20px;
+}
+.bookDetail #bookInfo input{
+    font-size: 18px;
+    width: 50px;
+}
+
+#orderNumber input{
+    width: 30px;
+    height: 25px;
+}
