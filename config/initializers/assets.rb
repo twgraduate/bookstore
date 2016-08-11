@@ -3,7 +3,7 @@
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( index.css )
-Rails.application.config.assets.precompile += %w( show.css )
+Rails.application.config.assets.precompile += %w( show_by_isbn.css )
 Rails.application.config.assets.precompile += %w( index.js )
 Rails.application.config.assets.precompile += %w( show.js )
 

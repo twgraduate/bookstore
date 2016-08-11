@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BOOKSTORE</title>
+  <title>Search Books</title>
   <%= stylesheet_link_tag 'index' %>
   <%= javascript_include_tag 'index' %>
 </head>
@@ -9,12 +9,7 @@
 <body>
 
 <div class="header">
-  <p>BOOK LIST!</p>
-</div>
-
-<div class = 'searchBar'>
-  <input id='searchText' type="text" value="" placeholder=" Input your book name">
-  <button onclick="goTo()">Search</button>
+  <p><%= truncate(params[:name], length: 20) %></p>
 </div>
 
 <div class="bookList">
