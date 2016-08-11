@@ -12,6 +12,8 @@
   <p><%= truncate(params[:name], length: 20) %></p>
 </div>
 
+<p id="returnToList"> <%= link_to 'Show the whole book list!', books_path%> </p>
+
 <div class="bookList">
   <% @books.each do |book| %>
       <table id="tableOfBook" border="1">
@@ -31,6 +33,5 @@
       </table>
   <% end %>
 </div>
-
 </body>
 </html>
