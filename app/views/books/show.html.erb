@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+  <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
   <title>BOOKSTORE</title>
   <%= stylesheet_link_tag 'show' %>
+  <%= javascript_include_tag 'show' %>
   <meta charset="utf-8">
-  <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
 </head>
 
 <body>
 <div class="bookDetail">
-  <div id="bookCover"><img src="<%= @book["img_url"] %>" , width="200"></div>
+  <div id="bookCover"><img src="<%= @book['img_url'] %>" , width="200"></div>
   <ul id="bookInfo">
-    <li>Book Name:<%= @book["name"] %></li>
-    <li>Book Isbn:<%= @book["isbn"] %></li>
-    <li>Book Author:<%= @book["author"] %></li>
-    <li id="price">Book Price:<%= @book["price"] %></li>
-    <li>Book Description:<%= @book["description"] %></li>
-    <div ng-app="">
-      <li>Order number: <input type="number" ng-model="thisTotalPrice"></li>
-      <li>Total price:{{thisTotalPrice * <%= @book["price"] %>}}</li>
-    </div>
-    <li><%= link_to "Book list!", books_path%></li>
+    <li>Book Name:<%= @book['name'] %></li>
+    <li>Book Isbn:<%= @book['isbn'] %></li>
+    <li>Book Author:<%= @book['author'] %></li>
+    <li id="price">Book Price:<%= @book['price'] %></li>
+    <li>Book Description:<%= @book['description'] %></li>
   </ul>
+  <div id ='checkPart' ng-app="" ng-init="orderNum=0">
+    <p>Order number: <input type="number" ng-model="orderNum"></p>
+    <p>Total price: <span ng-bind= "orderNum * <%= @book['price'] %>"></span> </p>
+    <a href="/books">Back To List!</a>
+  </div>
 </div>
 </body>
 </html>

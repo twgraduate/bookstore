@@ -7,12 +7,10 @@
 .bookDetail #bookInfo{
     font-size: 20px;
 }
-.bookDetail #bookInfo input{
-    font-size: 18px;
-    width: 50px;
+.bookDetail #checkPart{
+    font-size: 20px;
 }
-
-#orderNumber input{
-    width: 30px;
-    height: 25px;
+.bookDetail #checkPart input{
+    font-size: 18px;
+    width: 42px;
 }

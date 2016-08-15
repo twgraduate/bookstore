@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>BOOKSTORE</title>
+  <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+
   <%= stylesheet_link_tag 'index' %>
   <%= javascript_include_tag 'index' %>
 </head>
@@ -22,20 +24,19 @@
       <table id="tableOfBook" border="1">
         <tr>
           <td id='img'>
-            <a href="/books/<%= book['isbn'] %>"><img src="<%= book["img_url"] %>" , width="110px" , height="160px"></a>
+            <a href="/books/<%= book['isbn'] %>"><img src="<%= book['img_url'] %>" , width="110px" , height="160px"></a>
           </td>
           <td id="bookInfo">
             <ul>
-              <li><a href="/books/<%= book['isbn'] %>"><%= truncate(book["name"], length: 20) %></a></li>
-              <li>Isbn :<%= book["isbn"] %></li>
-              <li>Author:<%= book["author"] %></li>
-              <li>Price:<%= book["price"] %></li>
+              <li><a href="/books/<%= book['isbn'] %>"><%= truncate(book['name'], length: 20) %></a></li>
+              <li>Isbn :<%= book['isbn'] %></li>
+              <li>Author:<%= book['author'] %></li>
+              <li>Price:<%= book['price'] %></li>
             </ul>
           </td>
         </tr>
       </table>
   <% end %>
 </div>
-
 </body>
 </html>
